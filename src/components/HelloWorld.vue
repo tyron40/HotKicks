@@ -1,11 +1,10 @@
 <template>
   <body>
     <section id="header">
-
+       <a href="#"><img src="assets/logo.png" class="logo" alt=""></a>
        <div>
            <ul id="navbar">
-            <a href="#"><img src="assets/logo.png" class="logo" alt=""></a>
-              <li><a href="index.html">Home</a></li>
+              <li><a class="active" href="index.html">Home</a></li>
               <li><a href="shop.html">Shop</a></li>
               <li><a href="blog.html">Blog</a></li>
               <li><a href="about.html">About</a></li>
@@ -51,5 +50,35 @@ li {
 a {
   color: #42b983;
 }
-
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar li {
+list-style: none;
+padding: 0 20px;
+position: relative;
+}
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active {
+  color: #088178;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
 </style>
